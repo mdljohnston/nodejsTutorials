@@ -9,6 +9,12 @@
 function start () {
 
     console.log("request handler 'start' was called.");
+
+    function sleep(miliSeconds){
+        var startTime = new Date().getTime();
+        while (new Date().getTime() < startTime + miliSeconds);
+    }
+    sleep(10000);
     return "Hello Start";
 }
 
